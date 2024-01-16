@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/home_sub_cons"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView
+            android:id="@+id/homeSubItemSet"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20dp"
+            android:background="@drawable/home_subitem"
+            android:layout_margin="10dp"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/homeSubItemWeight"
+            android:layout_margin="10dp"
+            android:inputType="numberDecimal"
+            android:hint="kg"
+            android:background="@drawable/home_subitem"
+            app:layout_constraintLeft_toRightOf="@+id/homeSubItemSet"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:singleLine="true"/>
+
+        <EditText
+            android:hint="회"
+            android:inputType="number"
+            android:id="@+id/homeSubItemTime"
+            android:layout_margin="10dp"
+            android:background="@drawable/home_subitem"
+            app:layout_constraintLeft_toRightOf="@id/homeSubItemWeight"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:singleLine="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

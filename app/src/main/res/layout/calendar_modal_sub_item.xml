@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginVertical="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/home_sub_cons"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/modalSubItemSet"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:gravity="center"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/modalSubItemWeight"
+        android:layout_marginLeft="10dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@+id/modalSubItemSet"
+        app:layout_constraintTop_toTopOf="@+id/modalSubItemSet"
+        android:layout_width="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/modalSubItemSet"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/cardview_light_background"
+        android:singleLine="true"/>
+
+    <TextView
+        android:inputType="number"
+        android:id="@+id/modalSubItemTime"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/modalSubItemWeight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/modalSubItemWeight"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/cardview_light_background"
+        android:singleLine="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

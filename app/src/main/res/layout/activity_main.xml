@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="main"
+            type="com.diary.fitness_diary.MainActivity" />
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lab2_container">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/lab2_tabs"
+        android:layout_gravity="bottom"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="@android:color/darker_gray"
+        app:tabBackground="@color/white"
+        app:tabIndicatorColor="@color/myBlack"
+        app:tabRippleColor="@color/transparent"
+        app:tabSelectedTextColor="@color/myBlack"
+        app:tabIconTint="@color/tab_selector"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicator="@drawable/tab_design"
+        android:layout_alignParentBottom="true"/>
+    <LinearLayout
+        android:layout_marginHorizontal="40dp"
+        android:orientation="vertical"
+        android:layout_above="@+id/lab2_tabs"
+        android:id="@+id/tabLine"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/line"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lab2_viewPager"
+        android:layout_above="@+id/tabLine"/>
+
+
+
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <EditText
+        android:id="@+id/list_custom_item_EditText2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginVertical="0dp"
+        android:background="@color/transparent"
+        android:drawableLeft="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:hint="운동 이름을 입력해주세요"
+        android:lineBreakStyle="none"
+        android:singleLine="true"
+        app:layout_constraintEnd_toStartOf="@+id/list_view_list"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/list_custom_item_imgbtn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        android:id="@+id/barrier"
+        app:constraint_referenced_ids="list_view_list2"
+        />
+
+    <ImageButton
+        android:padding="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_view_list_24"
+        android:id="@+id/list_view_list2"
+        app:layout_constraintEnd_toStartOf="@+id/list_custom_item_imgbtn2"
+        app:layout_constraintTop_toTopOf="@+id/list_custom_item_imgbtn2"
+        app:layout_constraintBottom_toBottomOf="@+id/list_custom_item_imgbtn2"
+        android:backgroundTint="@color/transparent"
+        />
+    <ImageButton
+        android:padding="14dp"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/transparent"
+        android:id="@+id/list_custom_item_imgbtn2"
+        android:src="@drawable/ic_baseline_cancel_24"
+        app:layout_constraintBottom_toBottomOf="@+id/list_custom_item_EditText2"
+        app:layout_constraintTop_toTopOf="@+id/list_custom_item_EditText2"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

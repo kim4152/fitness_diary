@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <EditText
+        android:drawableLeft="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:layout_width="0dp"
+        android:hint="운동 이름을 입력해주세요"
+        android:layout_height="70dp"
+        android:id="@+id/list_custom_item_EditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:singleLine="true"
+        android:lineBreakStyle="none"
+        android:background="@color/transparent"
+        tools:ignore="MissingConstraints"
+        android:layout_marginVertical="20dp"/>
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        android:id="@+id/barrier"
+        app:constraint_referenced_ids="list_view_list"
+        />
+
+    <ImageButton
+        android:padding="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_view_list_24"
+        android:id="@+id/list_view_list"
+        app:layout_constraintEnd_toStartOf="@+id/list_custom_item_imgbtn"
+        app:layout_constraintTop_toTopOf="@+id/list_custom_item_EditText"
+        app:layout_constraintBottom_toBottomOf="@+id/list_custom_item_EditText"
+        android:backgroundTint="@color/transparent"
+        />
+
+    <ImageButton
+        android:padding="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_custom_item_imgbtn"
+        android:src="@drawable/ic_baseline_cancel_24"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_custom_item_EditText"
+        app:layout_constraintBottom_toBottomOf="@+id/list_custom_item_EditText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    

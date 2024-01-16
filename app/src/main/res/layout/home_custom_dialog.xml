@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="#F8F8FF"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true" >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:text="오늘 운동 완료"
+            android:gravity="center"
+            android:id="@+id/appCompatTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainItemCons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintTop_toBottomOf="@id/appCompatTextView1">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/dialogNO2"
+                android:text="취소"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/myBlack"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/myBlack"
+                app:cornerRadius="40dp"
+                app:layout_constraintRight_toLeftOf="@id/dialogOK1"
+                app:layout_constraintBottom_toBottomOf="@+id/mainItemCons"
+                app:layout_constraintLeft_toLeftOf="@+id/mainItemCons"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialogOK1"
+                android:text="저장"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                app:cornerRadius="40dp"
+                android:backgroundTint="@color/myBlack"
+                app:layout_constraintBottom_toBottomOf="@+id/dialogNO2"
+                app:layout_constraintTop_toTopOf="@+id/dialogNO2"
+                app:layout_constraintLeft_toRightOf="@id/dialogNO2"
+                app:layout_constraintRight_toRightOf="@+id/mainItemCons"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/transparent"
+    android:padding="8dp"
+    android:id="@+id/timerCons"
+    tools:context="com.diary.fitness_diary.home.TimerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_timer_background"
+        >
+
+
+        <ImageButton
+            android:src="@drawable/ic_baseline_close_24"
+            android:id="@+id/horizontalRule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/transparent"
+            android:padding="15dp"
+            />
+
+
+
+
+
+
+
+
+
+
+        <me.tankery.lib.circularseekbar.CircularSeekBar
+            android:visibility="invisible"
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalRule"
+            app:layout_constraintBottom_toTopOf="@+id/timerDelete"
+            app:cs_circle_color="@color/lightWhite"
+            app:cs_circle_fill="@color/transparent"
+            app:cs_circle_progress_color="@color/red"
+            app:cs_circle_stroke_width="3dp"
+            app:cs_circle_style="round"
+            app:cs_circle_x_radius="0dp"
+            app:cs_circle_y_radius="0dp"
+            app:cs_disable_pointer="false"
+            app:cs_disable_progress_glow="true"
+            app:cs_hide_progress_when_empty="true"
+            app:cs_lock_enabled="true"
+            app:cs_maintain_equal_circle="true"
+            app:cs_max="100"
+            app:cs_move_outside_circle="false"
+            app:cs_pointer_angle="0"
+            app:cs_pointer_color="@color/red"
+            app:cs_pointer_halo_border_width="0dp"
+
+            app:cs_pointer_halo_width="10dp"
+            app:cs_pointer_stroke_width="0dp"
+
+            app:cs_progress="50" />
+
+
+        <TextView
+            android:textStyle="italic"
+            android:textColor="@color/myBlack"
+            android:textSize="30dp"
+            android:textColorHighlight="@color/orange"
+            android:visibility="invisible"
+            android:id="@+id/ttv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consNumberPicker"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textM"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/number_picker1"
+                app:layout_constraintLeft_toLeftOf="@+id/number_picker1"
+                android:layout_marginLeft="20dp"
+                android:text="분"
+                android:textSize="15dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#F44336"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textS"
+                android:textColor="#F44336"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/number_picker2"
+                app:layout_constraintLeft_toLeftOf="@+id/number_picker2"
+                android:layout_marginLeft="20dp"
+                android:text="초"
+                android:textSize="15dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/number_picker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="#000"
+                app:np_max="29"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/black"
+                app:np_selectedTextSize="30dp"
+                app:np_textColor="#000"
+                app:np_textSize="20dp"
+                app:np_value="0"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/textM"
+                app:layout_constraintRight_toLeftOf="@+id/middleText"/>
+
+            <TextView
+                android:id="@+id/middleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/number_picker1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/number_picker1" />
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/number_picker2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:np_width="64dp"
+                app:np_height="180dp"
+                app:np_dividerColor="#000"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/black"
+                app:np_selectedTextSize="30dp"
+                app:np_textColor="#000"
+                app:np_textSize="20dp"
+                app:np_value="0"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/textS"
+                app:layout_constraintLeft_toRightOf="@+id/middleText"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/timerStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/consNumberPicker"
+            app:layout_constraintRight_toRightOf="@+id/consNumberPicker"
+            app:layout_constraintLeft_toLeftOf="@+id/consNumberPicker"
+            android:layout_marginTop="10dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#F44336"
+            android:backgroundTint="@color/white"
+            app:cornerRadius="20dp"
+            android:text="시작"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:visibility="invisible"
+            android:id="@+id/timerDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/consNumberPicker"
+            app:layout_constraintRight_toLeftOf="@+id/timerStop"
+            app:layout_constraintLeft_toLeftOf="@+id/consNumberPicker"
+            android:layout_marginTop="10dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/lightWhite"
+            android:backgroundTint="@color/lightWhite"
+            app:cornerRadius="20dp"
+            android:text="삭제"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:visibility="invisible"
+            android:id="@+id/timerStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/consNumberPicker"
+            app:layout_constraintRight_toRightOf="@+id/consNumberPicker"
+            app:layout_constraintLeft_toRightOf="@+id/timerDelete"
+            android:layout_marginTop="10dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#F44336"
+            android:backgroundTint="@color/white"
+            app:cornerRadius="20dp"
+            android:text="정지"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/myBlack"
+
+            />
+        <LinearLayout
+            android:id="@+id/timerLinear"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/timerStart"
+            android:orientation="horizontal" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
